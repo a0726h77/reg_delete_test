@@ -1,0 +1,13 @@
+A test to modify Windows Registry file, delete a account from the SAM file.
+
+
+Usege :
+    $ ./reg_delete.exp SAM
+
+
+To look accounts !
+    $ ./reged.static -e SAM
+
+    > ls SAM\Domains\Account\Users\Names
+    > q
+

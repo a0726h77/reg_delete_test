@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+set sam_file [lindex $argv 0]
+
+spawn ./reged.static -e $sam_file
+
+expect "> " {
+	send "cd \\SAM\\Domains\\Account\\Users\\Names\r"
+	send "rdel SUPPORT_388945a0\r"
+	send "q\r"
+	send "y\r"
+}
+
